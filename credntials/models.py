@@ -9,6 +9,10 @@ class InstType(models.Model):
 class Institutions(models.Model):
     typofins = models.ForeignKey(InstType, on_delete = models.CASCADE)
     nameofinst = models.CharField(max_length=50, unique = 'True', default = 'new3')
+
+    def __str__(self):
+        return self.typofins + self.nameofinst
+    
     
 class AccHolder(models.Model):
     nameofholder = models.CharField(max_length=20, unique = True)
