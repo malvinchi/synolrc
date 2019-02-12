@@ -3,5 +3,5 @@ from beauasia import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('pgrs', views.pgrs, name = 'pgres'),
+    path('pgrs/', views.pgrs, name = 'pgres'),
 ]
