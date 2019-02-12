@@ -1,9 +1,66 @@
-<html>
-   <head>
-     <title>postgres</title>
-   </head>
-   <body>
-     <h2> All about Postgresql</h2>
-   </body>
+<!doctype html>
+ {% load static %}
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>Responsive HTML5 Page Layout Template</title>
+    <meta name="description" content="Simple HTML5 Page layout template with header, footer, sidebar etc.">
+    
+   
+    <link rel="stylesheet" href="{% static 'beauasia/css/style.css' %}">
+    <script src="{% static 'beauasia/js/script.js' %}"></script>
+</head>
+
+<body>
+	<header>
+		<div id="logo"><img src="{% static 'beauasia/img/logo.png' %}">Beautiful Asia</div>
+		<nav>  
+			<ul>
+				<li><a href="/ba/">Home</a>
+				<li><a href="/lrc/">LRC</a>
+				<li><a href="https://html-css-js.com/css/code/">CSS</a>
+				<li><a href="https://htmlcheatsheet.com/js/">JS</a>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<strong>Postgresql _Notes</strong>
+	</section>
+	<section id="pageContent">
+		<main role="main">
+			<article>
+				<h2>Postgresql - Notes</h2>
+				<li> How to login as user " postgres"</li>
+				<p> Assume user "postgres" as the super user.
+				  linuxconsole>> sudo -su postgres psql
+
+				  or
+
+				  linuxconsole>> sudo su - postgres
+				  postgres@hostname >> psql
+				  psql(9.6.0)
+				  postgres=#>>
+
+
+				  </p>
+
+			</article>
+		
+	<footer>
+		<p>&copy; You can copy, edit and publish this template but please leave a link to our website | <a href="https://html5-templates.com/" target="_blank" rel="nofollow">HTML5 Templates</a></p>
+		<address>
+			Contact: <a href="mailto:me@example.com">Mail me</a>
+		</address>
+	</footer>
+
+
+</body>
+
 </html>
+
+
+
 
