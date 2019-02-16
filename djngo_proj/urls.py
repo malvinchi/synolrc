@@ -19,6 +19,7 @@ from django.urls import path
 from lrc import views
 
 urlpatterns = [
+    path(" ", include('lrc.urls')),
     path('lrc/', include('lrc.urls')),
     path('admin/', admin.site.urls),
     path('ba/', include('beauasia.urls')),
