@@ -1,17 +1,37 @@
+#+TITLE CREDENTIALS APP
+#+AUTHOR malvin
+#+DATE 10.01.2019
+
 # this file records all info for this project
 # The obejctive of this webapp is to record the following informations
 #     1. Credentials to login to various websites other that using Oauth or Single signon feature
       2. The credentials will belong to a group ( family , friends)
 
-1. Database models design
+*  Database models design
 
-   i) Institutions  - (will be a dictionary or list)
+   i) Institutions  - (will be a dictionary or list)                            
+
+   | INSTITUTION DATAMODEL |                      |                    |
+   |-----------------------+----------------------+--------------------|
+   | PROPERTYNAME          | PROPERTY CONSTRAINTS | Examples           |
+   |-----------------------+----------------------+--------------------|
+   | INSTNAME              | STRING               | SBI, ICI, MVD...   |
+   | INSTYPE               | STRING               | bank, govt, emails |
+   |-----------------------+----------------------+--------------------|
+   [[http://oncloudoffice.com:3000][oncloudoffice]]
+
+
+   
+   
+   
       		    name of institution
 		    type - "bank", "email", "govt"
 
   ii) instType    - Each type will have it own properties
-			 - Bank( Back acc type {sb, ca, rd ...)
+			 - Bank( Back name
+			 - Account type {sb, ca, rd ...)
 			 - Govt( DrivLic, RationCard, DigiLocker)
+
 			 
   iii) AccHolders  - (users whose portfolio will be displayed)
        		   - name of the holder
@@ -26,3 +46,5 @@
 		   - pwd
 		   - Sec questions
 		   - Sec answer
+
+		     
