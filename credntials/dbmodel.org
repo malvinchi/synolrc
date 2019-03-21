@@ -1,0 +1,60 @@
+#+TITLE CREDENTIALS APP
+#+AUTHOR malvin
+#+DATE 10.01.2019
+
+*** DONE create all the data models for this project
+
+
+
+# this file records all info for this project
+# The obejctive of this webapp is to record the following informations
+#     1. Credentials to login to various websites other that using Oauth or Single signon feature
+      2. The credentials will belong to a group ( family , friends)
+
+*  Database models design
+*** i) Institutions  - (will be a dictionary or list of the names of the institutions)                            
+
+   | INSTITUTION DATAMODEL |                      |                    |
+   |-----------------------+----------------------+--------------------|
+   | PROPERTYNAME          | PROPERTY CONSTRAINTS | Examples           |
+   |-----------------------+----------------------+--------------------|
+   | INSTYPE               | STRING               | bank, govt, emails |
+   | INSTNAME              | STRING               | SBI, ICI, MVD      |
+   | Address               |                      |                    |
+   |-----------------------+----------------------+--------------------|
+   |-----------------------+----------------------+--------------------|
+
+      [[HTTP://ONCLOUDOFFICE.COM:3000][
+ONCLOUDOFFICE]]
+
+
+
+*** II) RECORDTYPE    - EACH TYPE WILL HAVE IT OWN PROPERTIES
+			 - INSTNAME( BANK NAME, GOVT, EMAIL)
+			 - ACCOUNT TYPE {SB, CA, RD ...), DRIVLIC, RATIONCRD, DIGILOCK, PERSONALMAIL, OFFICIALMAIL)
+			 
+  | RECORD TYPE TABLE |                                 |                      |   |   |
+  | INSTNAME          | FOREIGN KEY                     | INSTITUTION.INSTNAME |   |   |
+  | RECTYPE           | SB, CA, RD, DRIVLIC, RATIONCARD |                      |   |   |
+  
+
+			 
+  III) ACCHOLDERS  - (USERS WHOSE PORTFOLIO WILL BE DISPLAYED)
+       		   - NAME OF THE HOLDER
+		   - EMAIL ID OF THE HOLDER
+		   - MOBILE NO
+
+   IV) CREDNTIAL  - ( ALL THE INFORMATION PERTAINING TO A USER)
+   		   - FK( ACCHOLDER.NAME)
+		   - FK( INSTITUTION.TYPE)
+		   - FK( INSTIUTION.TYPE.TYPE (SUB TYPE)
+		   - UID
+		   - PWD
+		   - SEC QUESTIONS
+		   - SEC ANSWER
+
+		     
+		   
+
+
+* Migration
