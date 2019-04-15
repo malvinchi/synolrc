@@ -2,7 +2,9 @@ from django.db import models
 # Create your models here.
 
 class InstType(models.Model):
-    typins = models.CharField(max_length=60, unique=True, default = 'new1') # Bank, Email, Govt
+    typins=models.CharField(max_length=60, unique=True, default = 'new1') # Bank, Email, Govt
+    instname=models.CharField(max_length=30, unique=True, default='new2') # SBI, HOTMAIL, MVD
+
     def __str__(self):
         return self.typins
 
