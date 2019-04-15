@@ -18,19 +18,27 @@
    | INSTNAME              | STRING               | SBI, ICI, MVD...   |
    | INSTYPE               | STRING               | bank, govt, emails |
    |-----------------------+----------------------+--------------------|
+   
+
    [[http://oncloudoffice.com:3000][oncloudoffice]]
 
-
-   
+  
    
    
       		    name of institution
 		    type - "bank", "email", "govt"
 
-  ii) instType    - Each type will have it own properties
-			 - Bank( Back name
-			 - Account type {sb, ca, rd ...)
-			 - Govt( DrivLic, RationCard, DigiLocker)
+  ii) recordType    - Each type will have it own properties
+			 - InstName( Bank name, govt, email)
+			 - Account type {sb, ca, rd ...), drivlic, rationcrd, digilock, personalmail, officialmail)
+			 
+
+
+  |  recordType  |          |
+  | InstName | InstType |
+  
+  
+
 
 			 
   iii) AccHolders  - (users whose portfolio will be displayed)
