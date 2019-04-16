@@ -2,22 +2,67 @@
 #+AUTHOR malvin
 #+DATE 10.01.2019
 
+<<<<<<< HEAD
+=======
 *** DONE create all the data models for this project
 
 
 
+>>>>>>> 8ad0486d7348401599dc843b272a7b0522a7fdf5
 # this file records all info for this project
 # The obejctive of this webapp is to record the following informations
 #     1. Credentials to login to various websites other that using Oauth or Single signon feature
       2. The credentials will belong to a group ( family , friends)
+<<<<<<< HEAD
+	 
+*  Database models design
+
+   i) Institutions  - (will be a dictionary or list)                            
+=======
 
 *  Database models design
 *** i) Institutions  - (will be a dictionary or list of the names of the institutions)                            
+>>>>>>> 8ad0486d7348401599dc843b272a7b0522a7fdf5
 
    | INSTITUTION DATAMODEL |                      |                    |
    |-----------------------+----------------------+--------------------|
    | PROPERTYNAME          | PROPERTY CONSTRAINTS | Examples           |
    |-----------------------+----------------------+--------------------|
+<<<<<<< HEAD
+   | INSTNAME              | STRING               | SBI, ICI, MVD...   |
+   | INSTYPE               | STRING               | bank, govt, emails |
+   |-----------------------+----------------------+--------------------|
+   [[http://oncloudoffice.com:3000][onclouOBdoffice]]
+
+
+   
+   
+   
+      		    name of institution
+		    type - "bank", "email", "govt"
+
+  ii) instType    - Each type will have it own properties
+			 - Bank( Back name
+			 - Account type {sb, ca, rd ...)
+			 - Govt( DrivLic, RationCard, DigiLocker)
+
+			 
+  iii) AccHolders  - (users whose portfolio will be displayed)
+       		   - name of the holder
+		   - email id of the holder
+		   - mobile no
+
+   iv) Credntial  - ( all the information pertaining to a user)
+   		   - FK( AccHolder.name)
+		   - FK( Institution.type)
+		   - FK( Instiution.type.Type (sub type)
+		   - UID
+		   - pwd
+		   - Sec questions
+		   - Sec answer
+
+		     
+=======
    | INSTYPE               | STRING               | bank, govt, emails |
    | INSTNAME              | STRING               | SBI, ICI, MVD      |
    | Address               |                      |                    |
@@ -58,3 +103,4 @@ ONCLOUDOFFICE]]
 
 
 * Migration
+>>>>>>> 8ad0486d7348401599dc843b272a7b0522a7fdf5
