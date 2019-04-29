@@ -2,12 +2,21 @@ from django.db import models
 # Create your models here.
 
 class InstType(models.Model):
+<<<<<<< HEAD
     #<<<<<<< HEAD
     typins=models.CharField(max_length=60, unique=True, default = 'new1') # Bank, Email, Govt
     instname=models.CharField(max_length=30, unique=True, default='new2') # SBI, HOTMAIL, MVD
     #=======
     typins=models.CharField(max_length=60, unique=True, default='new1') # Bank, Email, Govt
     #>>>>>>> 8ad0486d7348401599dc843b272a7b0522a7fdf5
+=======
+ #   <<<<<<< HEAD
+    typins=models.CharField(max_length=60, unique=True, default = 'new1') # Bank, Email, Govt
+    instname=models.CharField(max_length=30, unique=True, default='new2') # SBI, HOTMAIL, MVD
+ #   =======
+    typins=models.CharField(max_length=60, unique=True, default='new1') # Bank, Email, Govt
+  #  >>>>>>> 8ad0486d7348401599dc843b272a7b0522a7fdf5
+>>>>>>> 370ce4c8ef956905401ef28e7c1ceb00edb32511
 
     def __str__(self):
         return self.typins
@@ -23,7 +32,7 @@ class Institutions(models.Model):
 class AccHolder(models.Model):
     nameofholder = models.CharField(max_length=20, unique = True)
     emailid = models.EmailField(max_length=30, unique = True)
-    mobno = models.IntegerField(max_length = 13, unique = True)    
+    mobno = models.IntegerField(unique = True)    
 
 class credntials(models.Model):
     noh = models.ForeignKey(AccHolder, on_delete = models.CASCADE)
