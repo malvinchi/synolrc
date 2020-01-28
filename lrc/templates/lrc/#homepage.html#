@@ -136,7 +136,7 @@
 <br/>
 <a href="http://www.bogotobogo.com/python/pytut.php" targer="_blank">Python Tuts - BOGOTOBOGO</a>
 <br/>
-<a href="https://www.emacswiki.org/emacs/PythonProgrammingInEmacss" target='_blank'>Setting up Emacs for Python Development</a>
+<a href="https://www.emacswiki.org/emacs/PythonProgrammingInEmacs" target='_blank'>Setting up Emacs for Python Development</a>
 <br/>
 <a href="https://www.fullstackpython.com/web-development.html" target='_blank'>FullStackPython - Web Development</a>
 <br/>
@@ -297,8 +297,7 @@ target='_blank'>Modoboa Mail Server - Python</a>
 <br/>
 <a href="http://jekor.com/">Emacs Wizard - Jekor</a>
 <br/>
-<a href="https://www.emacswiki.org/emacs/ShellMode" target='_blank'>Emacs - Shell mode</a>
-<br/>
+
 
 <a href = 'https://www.latex-project.org/' target='_blank'> Latex - Official</a>
 <br/>
@@ -378,11 +377,9 @@ target='_blank'>Modoboa Mail Server - Python</a>
 <br/>
 
 
+
 <h3>Databases</h3>
-
-
-
-
+x
 <h4>Postgresql</h4>
 <a href="https://wiki.debian.org/PostgreSql" target="_blank">Postgres - Debian Installation</a>
 <br/>
