@@ -25,7 +25,7 @@ SECRET_KEY = '3o#0ebn!76&2sv981!1g$h6#v&b68a+i2v9h%2$$-1*v@kd1_)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['206.189.141.2', 'oncloudoffice.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['206.189.141.2', 'bigfamily.synology.me', '127.0.0.1', 'localhost','192.168.1.3']
 
 
 # Application definition
