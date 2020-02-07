@@ -1,4 +1,4 @@
-#!/home/malvin/Envs/djngo_env/bin/python3.6
+#!/home/malvin/Documents/VinodPersonal/workspace/lrc/projects/synlgy_proj/djngo_proj/djngo_env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

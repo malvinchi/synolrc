@@ -36,7 +36,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/malvin/Envs/djngo_env"
+set -gx VIRTUAL_ENV "/home/malvin/Documents/VinodPersonal/workspace/lrc/projects/synlgy_proj/djngo_proj/djngo_env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

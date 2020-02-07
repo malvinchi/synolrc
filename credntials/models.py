@@ -5,16 +5,9 @@ class InstType(models.Model):
 #<<<<<<< HEAD
     #<<<<<<< HEAD
     typins=models.CharField(max_length=60, unique=True, default = 'new1') # Bank, Email, Govt
-    instname=models.CharField(max_length=30, unique=True, default='new2') # SBI, HOTMAIL, MVD
+#    instname=models.CharField(max_length=30, unique=True, default='new2') # SBI, HOTMAIL, MVD
     #=======
-    typins=models.CharField(max_length=60, unique=True, default='new1') # Bank, Email, Govt
-    #>>>>>>> 8ad0486d7348401599dc843b272a7b0522a7fdf5
-#=======
- #   <<<<<<< HEAD
-    typins=models.CharField(max_length=60, unique=True, default = 'new1') # Bank, Email, Govt
-    instname=models.CharField(max_length=30, unique=True, default='new2') # SBI, HOTMAIL, MVD
- #   =======
-    typins=models.CharField(max_length=60, unique=True, default='new1') # Bank, Email, Govt
+  
   #  >>>>>>> 8ad0486d7348401599dc843b272a7b0522a7fdf5
 #>>>>>>> 370ce4c8ef956905401ef28e7c1ceb00edb32511
 
@@ -26,7 +19,7 @@ class Institutions(models.Model):
     nameofinst = models.CharField(max_length=50, unique = 'True', default = 'new3')
 
     def __str__(self):
-        return self.typofins + self.nameofinst
+        return (self.nameofinst)
     
     
 class AccHolder(models.Model):
