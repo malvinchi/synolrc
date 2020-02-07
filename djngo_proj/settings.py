@@ -28,7 +28,7 @@ DEBUG = True
 #####<<<<<<< HEAD
 ALLOWED_HOSTS = ['206.189.141.2', 'rasp65.synology.me', '127.0.0.1', 'localhost']
 ##### =======
-ALLOWED_HOSTS = ['206.189.141.2', 'bigfamily.synology.me', '127.0.0.1', 'localhost','192.168.1.3']
+ALLOWED_HOSTS = ['rasp65.synology.me', 'bigfamily.synology.me', '127.0.0.1', 'localhost','192.168.1.3']
 ##### >>>>>>> 73652b50c4efb257e9b672f35c07cacbbcbbf1d3
 
 
