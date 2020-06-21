@@ -27,10 +27,13 @@ class AccHolder(models.Model):
     emailid = models.EmailField(max_length=30, unique = True)
     mobno = models.IntegerField(unique = True)    
 
+
+
+    
 class Credntials(models.Model):
-    noh = models.ForeignKey('AccHolder', on_delete = models.CASCADE)
-    noi = models.ForeignKey('Institutions', on_delete = models.CASCADE)
-    noit = models.ForeignKey('InstType', on_delete = models.CASCADE)
+    noh = models.ForeignKey('AccHolder', on_delete = models.CASCADE) # name of account holder
+    noi = models.ForeignKey('Institutions', on_delete = models.CASCADE) # nameofinst
+    noit = models.ForeignKey('InstType', on_delete = models.CASCADE) # institute type
     uid = models.CharField(max_length = 16)
     pwd = models.CharField(max_length = 24)
     secq = models.CharField(max_length = 60, default = 'whats my favorite color')
