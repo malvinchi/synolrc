@@ -1,3 +1,5 @@
+## All about Djngo Models
+
 from django.db import models
 # Create your models here.
 
@@ -25,15 +27,17 @@ class Institutions(models.Model):
 class AccHolder(models.Model):
     nameofholder = models.CharField(max_length=20, unique = True)
     emailid = models.EmailField(max_length=30, unique = True)
-    mobno = models.IntegerField(unique = True)    
+    mobno = models.IntegerField(unique = True)
 
+    def __str__(self):
+        return (self.nameofholder)
 
 
     
 class Credntials(models.Model):
-    noh = models.ForeignKey('AccHolder', on_delete = models.CASCADE) # name of account holder
-    noi = models.ForeignKey('Institutions', on_delete = models.CASCADE) # nameofinst
-    noit = models.ForeignKey('InstType', on_delete = models.CASCADE) # institute type
+    noh = models.ForeignKey(AccHolder, on_delete = models.CASCADE) # name of account holder
+    noi = models.ForeignKey(Institutions, on_delete = models.CASCADE) # name o finst
+    noit = models.ForeignKey(InstType, on_delete = models.CASCADE) # institution type
     uid = models.CharField(max_length = 16)
     pwd = models.CharField(max_length = 24)
     secq = models.CharField(max_length = 60, default = 'whats my favorite color')

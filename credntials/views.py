@@ -1,3 +1,5 @@
+## Crednetial app views
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from credntials import views

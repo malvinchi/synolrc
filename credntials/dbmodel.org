@@ -1,10 +1,26 @@
-#+TITLE CREDENTIALS APP
+#+TITLE: CREDENTIALS APP
 
-#+AUTHOR malvin
-#+DATE 10.01.2019
+#+AUTHOR: malvin
+#+DATE: 10.01.2019
 
 <<<<<<< HEAD
 =======
+** Project Methodology
+
+     1. First  define models representing your business informations (i.e. [[file:~/ws/lrc/projects/synolrc/djngo_proj/credntials/models.py::##%20All%20about%20Djngo%20Models][SynoLrc_Credential Model module]] )
+	- Define __str__() function to represent the objects as string. 
+     2. Next create relationship in the models ( use foreign keys)
+     3. Register your model in the admin site (repr by [[file:admin.py::##%20admin.py%20module][admin.py module]]) 
+     4. Create your Views in [[file:views.py::##%20Crednetial%20app%20views][view.py]]
+	1. A view file receives request data along with pattern captured data.
+	2. It will return a HttpResponse object with the request data or return Http404(page not found) data
+	3. It will invoke the template, load the template and return the view with data to urlconf which will pass it to client(browser)
+     5. Create your URLconf module which maps the urls to various views of the application
+
+
+
+
+
 *** DONE create all the data models for this project
 
 
@@ -105,3 +121,9 @@ ONCLOUDOFFICE]]
 
 * Migration
 >>>>>>> 8ad0486d7348401599dc843b272a7b0522a7fdf5
+
+
+
+
+#+BIBLIOGRAPHY:
+[[https://docs.djangoproject.com/en/3.0/intro/overview/#design-your-model][Django Project Dox Official]]
