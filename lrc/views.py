@@ -17,5 +17,3 @@ def time_now(request):
     now=datetime.datetime.now()
     html ='<html><body> The time now is {0} </body></html>'.format(now)
     return HttpResponse(html)
-
-
