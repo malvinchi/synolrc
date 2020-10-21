@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      {% block title %}
+      {{title | default:"undefined_page" }}
+      {% endblock title %} 
+    </title>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+
+  </head>
+  
+  <body>
+
+    <div class="topnav">
+      <a class="active" href="#home">Home- Read(R)</a>
+      <a href="#news">Create(C)</a>
+      <a href="#contact">Update(U)</a>
+      <a href="#about">Delete(D)</a>
+    </div>
+
+    <div class="w3-container w3-teal">
+      {% block header %}
+      <h3>{{wlc}}</h3>
+      {% endblock header %}
+    </div>
+
+    {% block content %}
+    <img src={% static "swastik_94x94.jpg" %} alt="Swastic">
+    
+    <div class="w3-container">
+      <p> Swastik - A yantra for worship( place holder)</p>
+    </div>
+    {% endblock content%}
+    
+    <div class="w3-container w3-teal">
+      <p>My Footer</p>
+        <strong>Today: {% now "d-m-yy" %}</strong>  
+    </div>   
+
+  </body>
+
+</html>

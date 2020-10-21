@@ -1,0 +1,17 @@
+{% extends "fdms/templatew3css.html" %}
+
+<address>
+<a href="mailto:malvin@deb10chrthy.homenet.me">vinodk</a>
+</address>
+
+    {% block content %}
+    
+    <div class="w3-container">
+      <h2>Thanks !!</h2>
+    </div>
+    {% endblock content%}
+
+<h1>Thanks !!</h1>
+
+</body>
+</html>

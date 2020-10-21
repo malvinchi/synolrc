@@ -1,0 +1,21 @@
+{% extends "fdms/templatew3css.html" %}
+
+ {% block header %}
+      <h3>{{header}}</h3>
+   {% endblock header %}
+
+
+{% block content %}
+
+<form action="" method="POST">
+  {% csrf_token  %}
+  <table>
+    <tr>   {{ form.as_table }} </tr>
+     </table>
+  <table>
+     <tr>  <input type="submit" value="Submit"> </tr>
+  </table>
+
+</form>
+
+{% endblock %}

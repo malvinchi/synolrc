@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -32,6 +33,7 @@ ALLOWED_HOSTS = ['bigfamily.synology.me', '127.0.0.1', 'localhost', '192.168.0.1
 # Application definition
 
 INSTALLED_APPS = [
+    'fdms.apps.FdmsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     'lrc',
     'beauasia',
     'credntials',
+    
 ]
 
 MIDDLEWARE = [
@@ -58,7 +61,7 @@ ROOT_URLCONF = 'djngo_proj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'fdms/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'fdms/static'),]
+
+# MEDIA STORAGE CONFIG
+MEDIA_ROOT='/home/malvin/Documents/VinodPersonal/workspace_deb10_21072020/lrc/projects/synolrc/djngo_proj/'

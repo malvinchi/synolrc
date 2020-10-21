@@ -23,5 +23,6 @@ urlpatterns = [
     path('lrc/', include('lrc.urls')),
     path('admin/', admin.site.urls),
     path('ba/', include('beauasia.urls')),
-    path ('crdn/', include('credntials.urls')),
+    path('crdn/', include('credntials.urls')),
+    path('fdms/', include('fdms.urls'))
 ]
