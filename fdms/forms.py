@@ -1,4 +1,4 @@
-# this is the form to create institutions, beneficary and securities  information
+# viethis is the form to create institutions, beneficary and securities  information
 from django import forms
 from django.forms import ModelForm
 from fdms.models import Institutions, Beneficary, Securities
@@ -15,7 +15,7 @@ class Instform(forms.Form):
 class BeneficiaryMF(ModelForm):
     class Meta:
         model = Beneficary
-        fields = ['beneficary', 'benfcontact']
+        fields = ['benef', 'benfcontact']
 
         
 # create a ModelForm for Institution
@@ -23,3 +23,6 @@ class InstitutionMF(ModelForm):
     class Meta:
         model = Institutions
         fields = ['instname', 'instype', 'instaddr']
+
+
+

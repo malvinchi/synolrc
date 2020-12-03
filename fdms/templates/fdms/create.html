@@ -6,8 +6,7 @@
 
   {% csrf_token %}
   <table>
-    <tr>{{form.as_table }} </tr>
-     <tr>{{form1.as_table }} </tr>
+    <tr>{{form.as_table|title }} </tr>
   </table>
   
 <table> 
@@ -16,5 +15,17 @@
   
 </form>
 
+<form action='' method='POST'>
+
+  {% csrf_token %}
+  <table>
+     <tr>{{form1.as_table }} </tr>
+  </table>
+  
+<table> 
+  <tr><input type="submit" value="Enter"></tr>
+</table>
+  
+</form>
 
 {% endblock  %}
