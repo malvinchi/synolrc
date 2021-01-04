@@ -1,0 +1,28 @@
+{% extends "fdms/templatew3css.html" %}
+
+{% block title %}
+{{ title|default:"ReadFdms" }}
+{% endblock title %}
+
+{% block header %}
+{{ wlc|default:"Read the FDMS" }}
+{% endblock header %}
+
+{% block content %}
+
+<form action="/fdms/read_fm/" method="post">
+{% csrf_token %}
+  <label for="instname">Institution Name</label>
+  <input type="text" name="instname">
+  <br/>
+  <label for="instype">Institute Type</label>
+  <label for="bank" id="bank">Bank</label>
+  <input type="radio" name="instype" id="bank" value="bank">
+  <label for="fincorp" id="fincorp">Financial Inst</label>
+  <input type="radio" name="instype" id="fincorp" value="fincorp">
+  <label for="inscomp" id="inscomp">Insurance Comp</label>
+  <input type="radio" name="instype" id="inscomp" value="inscomp">
+  <br/>
+  <input type="submit" value="Submit">
+</form>
+{% endblock content %}

@@ -41,18 +41,24 @@
 </div>
 
     {% block content %}
-    <img src={% static "swastik_94x94.jpg" %} alt="Swastic">
+    <img src={% static "swastik_94x94.jpg" %} alt="Swastic" id="stk">
     
     <div class="w3-container">
       <p> Swastik - A yantra for worship( place holder)</p>
     </div>
-    {% endblock %}
+
+{% endblock %}
+
+ <button  onclick="document.getElementById('swastic').src={% static 'sri_chakra400.jpg' %}"> Click Me </button>
+
 
     <div class="w3-container w3-teal">
       <p>My Footer</p>
         <strong>Today: {% now "d-M-yy" %}</strong>  
     </div>   
 
-  </body>
+    <!-- Here starts Javascript -->
+    
+</body>
 
 </html>

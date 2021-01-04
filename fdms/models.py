@@ -14,6 +14,7 @@ class Institutions(models.Model):
     def __str__(self):
         return self.instname + self.instaddr
 
+
 #BENEFICIARY
 class Beneficary(models.Model):
     benef = models.CharField(max_length=30, unique=True)
@@ -21,6 +22,7 @@ class Beneficary(models.Model):
 
     def __str__(self):
         return self.benef
+
 
 #SECURITIES
 class Securities(models.Model):

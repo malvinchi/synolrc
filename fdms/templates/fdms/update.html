@@ -1,0 +1,33 @@
+{% extends 'fdms/templatew3css.html'  %}
+
+{% block content  %}
+<!-- 
+<form action='' method='POST'>
+
+  {% csrf_token %}
+  <table>
+    <tr>{{form11.as_table|title }} </tr>
+
+  </table>
+  
+<table> 
+  <tr><input type="submit" value="Enter"></tr>
+</table>
+  
+</form>
+--> 
+<form action='' method='POST'>
+
+  {% csrf_token %}
+  <table>
+     <tr> Beneficiary Name {{form1.as_table|title }} </tr>
+    <tr>  </tr>
+  </table>
+  
+<table> 
+  <tr><input type="submit" value="Enter"></tr>
+</table>
+  
+</form>
+
+{% endblock  %}

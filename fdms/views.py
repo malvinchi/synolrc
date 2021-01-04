@@ -1,39 +1,44 @@
-from django.shortcuts import render, HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, HttpResponse, HttpResponseRedirect, redirect
 from .forms import Instform, BeneficiaryMF, InstitutionMF
 from django.views import View
+from django.contrib import messages
 
 # Create your views here.
 # home page rendering
 def fdms_home(request):
     wlcom = "Welcome to FDMS - Home"
-    context = {"wlc" : wlcom, 'title':"FDMS -Welcome! Home"}
+    context = {"wlc" : wlcom, 'title':"FDMS- Home"}
 
     return render(request, "fdms/welcome.html", context)
 #    return HttpResponse("<h2> Welcome to FDMS </h2>")
 
+"""
 def fdms_create_mf(request):
     if request.method == "POST":
         form_mf=InstitutionMF(request.POST)
         if form_mf.is_valid():
-           cfd= form_mf.cleaned_data
-           cfd.save()
-           return HttpResponseRedirect("thanks/")
-        else:
-            return HttpResponseRedirect('error/')
-#            form_mf=InstitutionMF()
+            form_mf.save()
+            return HttpResponseRedirect(request, "thanks/")
+    else:
+        return HttpResponse(request, "fdms/create.html", context)
+            form_mf=InstitutionMF()
+"""
+
+def fdms_create_bf(request):
     if request.method=="POST":
         benef = BeneficiaryMF(request.POST)
         if benef.is_valid():
             benef.save()
-            return HttpResponseRedirect("thanks/")
+            messg = messages.success(request, "Addition Successful for {ben1}")
+            return HttpResponseRedirect(request, "thanks/", {'msg' : messg})
             
     else:
-        form_mf = InstitutionMF()
+        #form_mf = InstitutionMF()
         benef = BeneficiaryMF()
 
     title="CreateMF_Page"
     header="Create  Db Info"
-    context={'title':title, 'header':header, "form":form_mf, "form1":benef} 
+    context={'title':title, 'header':header, "form1":benef} 
     return render(request, 'fdms/create.html', context)
 
 def fdms_thanks(request):
@@ -60,13 +65,15 @@ class GreetingMsg(View):
 def fdms_update(request):
     if request.method == "POST":
         benf2 = BeneficiaryMF(request.POST)
+        
         if benf2.is_valid():
             benf2.save()
     else:
-        benf2 = BeneficiaryMF()
-        
+        benf21=BeneficiaryMF()
+
+    
     wlcom = "Update your DB"
-    context={'form1': benf2, "wlc": wlcom}
+    context={'form1': benf21, "wlc": wlcom }
     return render(request, "fdms/update.html", context)
 
 def fdms_read(request):
