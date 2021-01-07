@@ -25,24 +25,31 @@ def fdms_create_mf(request):
 """
 
 def fdms_create_bf(request):
-    if request.method=="POST":
-        benef = BeneficiaryMF(request.POST)
-        if benef.is_valid():
-            benef.save()
-            messg = messages.success(request, "Addition Successful for {ben1}")
-            return HttpResponseRedirect(request, "thanks/", {'msg' : messg})
+    try:
+        if request.method == "POST":
+            benef = BeneficiaryMF(request.POST)
+            if benef.is_valid():
+                 messg = messages.success(request, "Addition Successful for {ben1}")
+                return HttpResponseRedirect(request, "thanks/", {'msg' : messg})
             
-    else:
-        #form_mf = InstitutionMF()
-        benef = BeneficiaryMF()
+            else:
+                print("Sll fine")
+        else:
+            #form_mf = InstitutionMF()
+            benef = BeneficiaryMF()
+    
+    except TypeError:
+        return render(request, 'fdms/error.html')
 
-    title="CreateMF_Page"
-    header="Create  Db Info"
-    context={'title':title, 'header':header, "form1":benef} 
-    return render(request, 'fdms/create.html', context)
+    else:
+        title="CreateMF_Page"
+        header="Create  Db Info"
+        context={'title':title, 'header':header, "form1":benef} 
+        return render(request, 'fdms/create.html', context)
+
 
 def fdms_thanks(request):
-    return render(request, 'fdms/thanks.html')
+    return HttpResponse(request, 'fdms/thanks.html', )
 
 def fdms_error(request):
     return render(request, 'fdms/error.html')

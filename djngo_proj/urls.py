@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
 from lrc import views
-from fdms import views
+#from fdms import views
 
 urlpatterns = [
     path('', include('lrc.urls')),
